@@ -63,7 +63,9 @@ body {
     margin-bottom: 5px;
     border-left: 3px solid #ff3b3f;
     overflow: hidden;
-    height: 0px !important;
+    transition: 0.5s;
+    transform: scaleY(0);
+    height: 0;
 }
 .menu-body > .sub-btn > ul {
     list-style: none;
@@ -74,9 +76,10 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
-.menu-body > .sub-btn > ul > li:hover {
+.sub-btn > ul > li:hover, .sub-btn > ul > li:focus {
     background: #ff3b3f;
 }
 .menu-body > .sub-btn.active {
-    height: auto !important;
+    transform: scaleY(1) !important;
+    height: auto;
 }
